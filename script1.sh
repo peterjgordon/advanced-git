@@ -1,12 +1,12 @@
 #!/bin/bash
 
+cd ~
 
 if [ ! $# ==  2 ]
 then 
 echo $#"/2 arguments provided: script1.sh <folderName> <fileName>"
 exit
 fi
-
 
 if [ !  -d "team" ]
 then
