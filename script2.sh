@@ -12,7 +12,7 @@ then
 echo "Please specify the number of books to create."
 exit -1
 # check if the variable is an integer :S
-elif [ ! [ $1 =~ ^-?[0-9]+$ ] ]
+elif [[ ! $1 =~ ^-?[0-9]+$ ]]
 then
 echo "The parameter specified should be a number."
 exit -1
