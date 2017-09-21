@@ -3,7 +3,7 @@
 
 if [ ! $# ==  2 ]
 then 
-echo $#"/2 arguements provided, please run again"
+echo $#"/2 arguments provided: script1.sh <folderName> <fileName>"
 exit
 fi
 
