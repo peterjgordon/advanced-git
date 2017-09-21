@@ -1,20 +1,23 @@
 #!/bin/bash
 
-# Create directory if it doesn't exist
-if [ ! -d "library" ]
+# Empty the directory and create it if necessary
+if [ -d "library" ]
 then
-mkdir library
+rm -rf library
 fi
+mkdir library
 
 # Check for a parameter
-if [ ! "$1" ]
+if [ $# != 1 ]
 then
-echo "Please specify the number of books to create."
+echo "Invalid parameters: script2.sh <numOfBooks>"
 exit -1
-# check if the variable is an integer :S
-elif [[ ! $1 =~ ^-?[0-9]+$ ]]
+fi
+
+# Check if the variable is an integer :S
+if [[ ! $1 =~ ^-?[0-9]+$ ]]
 then
-echo "The parameter specified should be a number."
+echo "Invalid parameters: numOfBooks should be a number."
 exit -1
 fi
 
