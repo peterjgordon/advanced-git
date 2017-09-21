@@ -15,7 +15,7 @@ exit -1
 fi
 
 # Check if the variable is an integer :S
-if [[ ! $1 =~ ^-?[0-9]+$ ]]
+if [[ ! $1 =~ ^[0-9]+$ ]]
 then
 echo "Invalid parameters: numOfBooks should be a number."
 exit -1
